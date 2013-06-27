@@ -44,7 +44,7 @@ In your project directory, put a file `ns.config`.
 
 
 ### Before you run
-With `jade`, `coffee`, `stylus` commands installed if you wan to compile three of theme.
+With `jade`, `coffee`, `stylus` commands installed if you wan to compile three of them.
 ```
 sudo npm install jade -g
 sudo npm install coffee-script -g
