@@ -1,0 +1,17 @@
+{
+  "name": "node-serve",
+  "description": "Development hosting with live compile of Jade, CoffeeScript, Stylus and more.",
+  "version": "0.1.0",
+  "author": "Shallker Wang <shallker.wang@profero.com>",
+  "main": "index",
+  "bin": {
+    "node-serve": "./bin/node-serve.js"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shallker-wang/node-serve.git"  
+  },
+  "dependencies": {
+    "mime": "*"
+  }
+}
