@@ -5,13 +5,15 @@
   "author": "Shallker Wang <shallker.wang@profero.com>",
   "main": "index",
   "bin": {
-    "node-serve": "./bin/node-serve.js"  
+    "node-serve": "./bin/cli"  
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/shallker-wang/node-serve.git"  
   },
   "dependencies": {
-    "mime": "*"
+    "mime": "*",
+    "commander": "*",
+    "ncp": "*"
   }
 }
