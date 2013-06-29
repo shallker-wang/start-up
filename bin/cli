@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+/* node-serve command line interface */
+var command = require('commander');
+var NodeServe = require('./node-serve');
+
+command
+  .version('0.0.1')
+  .option('-e --example', 'Generate an example')
+  .parse(process.argv);
+
+if (command.example) {
+  var name = command.example[0];
+  return NodeServe.create(name);
+}
+
+if (command.args) return console.warn('unrecognized option: ' + command.args[0]);
+
+NodeServe.run();
