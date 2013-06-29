@@ -8,19 +8,19 @@ Development hosting with live compile of Jade, CoffeeScript, Stylus and more.
 sudo npm install git://github.com/shallker-wang/node-serve.git -g
 ```
 
-### Quick Start
-Copy an example to init your project:
+## Quick Start
+Create an example to start your new project:
 ```bash
-git clone git://github.com/shallker-wang/node-serve-example.git my-project
+node-serve example my-new-project
 ```
 
-Jump inside and start your development:
+Jump inside, run `node-serve` and start your development:
 ```bash
-cd my-project
+cd my-new-project
 node-serve
 ```
 
-### You will love the config file
+## You will love the config file
 In your project directory, put a file `ns.config`:
 ```
 {
@@ -50,7 +50,7 @@ In your project directory, put a file `ns.config`:
 ```
 
 
-### Before you run
+## Before you run
 With `jade`, `coffee`, `stylus` commands installed if you wan to compile three of them:
 ```
 sudo npm install jade -g
@@ -58,7 +58,7 @@ sudo npm install coffee-script -g
 sudo npm install stylus -g
 ```
 
-### Todo
+## Todo
 * livereload
 * performance
-* command `node-serve example`
+* ~~command `node-serve example`~~
