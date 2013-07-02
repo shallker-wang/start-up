@@ -59,7 +59,8 @@ sudo npm install stylus -g
 ```
 
 ## Todo
-* livereload
+* css livereload
 * performance
 * ~~command `node-serve example`~~
 * add ETag support
+* remove ncp dependency
