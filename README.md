@@ -62,3 +62,4 @@ sudo npm install stylus -g
 * livereload
 * performance
 * ~~command `node-serve example`~~
+* add ETag support

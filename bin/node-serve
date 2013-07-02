@@ -2,10 +2,10 @@
 
 /* node-serve command line interface */
 var command = require('commander');
-var NodeServe = require('./node-serve');
+var NodeServe = require('../lib/node-serve');
 
 command
-  .version('0.0.1')
+  .version('0.1.1')
   .option('-e --example', 'Generate an example')
   .parse(process.argv);
 
@@ -14,6 +14,6 @@ if (command.example) {
   return NodeServe.create(name);
 }
 
-if (command.args) return console.warn('unrecognized option: ' + command.args[0]);
+if (command.args.length) return console.warn('unrecognized option: ' + command.args[0]);
 
 NodeServe.run();
