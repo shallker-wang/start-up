@@ -64,3 +64,4 @@ sudo npm install stylus -g
 * ~~command `node-serve example`~~
 * add ETag support
 * remove ncp dependency
+* remove commands pre-installed requirements
