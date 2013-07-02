@@ -65,3 +65,4 @@ sudo npm install stylus -g
 * add ETag support
 * remove ncp dependency
 * remove commands pre-installed requirements
+* remove .gitkeep, create build directories before compile
