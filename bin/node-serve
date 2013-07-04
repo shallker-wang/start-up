@@ -7,11 +7,16 @@ var NodeServe = require('../lib/node-serve');
 command
   .version('0.1.1')
   .option('-e --example', 'Generate an example')
+  .option('-c --config', 'Generate a config file')
   .parse(process.argv);
 
 if (command.example) {
   var name = command.example[0];
-  return NodeServe.create(name);
+  return NodeServe.createProject(name);
+}
+
+if (command.config) {
+  return NodeServe.createConfig();
 }
 
 if (command.args.length) return console.warn('unrecognized option: ' + command.args[0]);
