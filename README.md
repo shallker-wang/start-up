@@ -63,6 +63,7 @@ sudo npm install stylus -g
 * performance
 * ~~command `node-serve example`~~
 * add ETag support
+* add 'If-Modified-Since' header support
 * remove ncp dependency
 * remove commands pre-installed requirements
 * remove .gitkeep, create build directories before compile
