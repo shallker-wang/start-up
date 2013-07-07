@@ -21,4 +21,4 @@ if (command.config) {
 
 if (command.args.length) return console.warn('unrecognized option: ' + command.args[0]);
 
-NodeServe.run();
+NodeServe.serve();
