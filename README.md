@@ -24,8 +24,10 @@ node-serve
 In your project directory, put a file `ns.config`:
 ```
 {
-  "host": "./build",
-  "port": 8899,
+  "server": {
+    "port": 8899,
+    "host": "./build"
+  },
   "compile": {
     "jade": {
       "input": "./src/html",
@@ -42,13 +44,9 @@ In your project directory, put a file `ns.config`:
       "compress": true
     }
   },
-  "livereload": [
-    "./build/js",
-    "./build/css"
-  ]
+  "livereload": "./build/css"
 }
 ```
-
 
 ## Before you run
 With `jade`, `coffee`, `stylus` commands installed if you wan to compile three of them:
@@ -59,7 +57,7 @@ sudo npm install stylus -g
 ```
 
 ## Todo
-* css livereload
+* ~~livereload~~
 * performance
 * ~~command `node-serve example`~~
 * add ETag support
