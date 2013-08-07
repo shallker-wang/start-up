@@ -2,7 +2,7 @@
 
 /* node-serve command line interface */
 var command = require('commander');
-var NodeServe = require('../lib/node-serve');
+var nodeserve = require('../lib/node-serve');
 
 command
   .version('0.1.1')
@@ -12,13 +12,15 @@ command
 
 if (command.example) {
   var name = command.example[0];
-  return NodeServe.createProject(name);
+  return nodeserve.createProject(name);
 }
 
 if (command.config) {
-  return NodeServe.createConfig();
+  return nodeserve.createConfig();
 }
 
-if (command.args.length) return console.warn('unrecognized option: ' + command.args[0]);
+if (command.args.length) {
+  return console.warn('unrecognized option: ' + command.args.shift());
+}
 
-NodeServe.serve();
+nodeserve.serve();
