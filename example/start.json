@@ -1,0 +1,23 @@
+{
+  "server": {
+    "port": 8899,
+    "host": "./build/"
+  },
+  "compile": {
+    "jade": {
+      "input": "./src/html/",
+      "output": "./build/",
+      "pretty": true
+    },
+    "coffee": {
+      "input": "./src/js/",
+      "output": "./build/js/"
+    },
+    "stylus": {
+      "input": "./src/css/",
+      "output": "./build/css/",
+      "compress": true
+    }
+  },
+  "liverefresh": "./build/css/"
+}

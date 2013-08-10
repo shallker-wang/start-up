@@ -1,20 +1,34 @@
 {
-  "name": "node-serve",
+  "name": "start-up",
   "description": "Development hosting with live compile of Jade, CoffeeScript, Stylus and more.",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": "Shallker Wang <shallker.wang@profero.com>",
-  "main": "index",
+  "main": "index.js",
+  "keywords": [
+    "start-up", "start", "development"
+  ],
   "bin": {
-    "node-serve": "./bin/node-serve"  
+    "start": "./bin/start"  
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shallker-wang/node-serve.git"  
+    "url": "https://github.com/shallker-wang/start-up.git"  
+  },
+  "bugs": {
+    "url": "https://github.com/shallker-wang/start-up/issues"
   },
   "dependencies": {
+    "ncp": "*",
     "mime": "*",
     "commander": "*",
-    "ncp": "*",
     "live-refresh": "*"
-  }
+  },
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha --recursive --compilers coffee:coffee-script -r should"
+  },
+  "license": "MIT"
 }

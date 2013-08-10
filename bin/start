@@ -1,26 +1,26 @@
 #!/usr/bin/env node
 
-/* node-serve command line interface */
-var command = require('commander');
-var nodeserve = require('../lib/node-serve');
+/* start up command line interface */
+var command = require('commander'),
+    startup = require('../index');
 
 command
-  .version('0.1.1')
+  .version(startup.version)
   .option('-e --example', 'Generate an example')
   .option('-c --config', 'Generate a config file')
   .parse(process.argv);
 
 if (command.example) {
   var name = command.example[0];
-  return nodeserve.createProject(name);
+  return startup.createProject(name);
 }
 
 if (command.config) {
-  return nodeserve.createConfig();
+  return startup.createConfig();
 }
 
 if (command.args.length) {
   return console.warn('unrecognized option: ' + command.args.shift());
 }
 
-nodeserve.serve();
+startup.serve();
