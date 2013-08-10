@@ -11,24 +11,17 @@ Development hosting with live compilations of Jade, CoffeeScript, Stylus and mor
 
 
 ## Installation
-
 ```bash
 sudo npm install start-up -g
 ```
 
 
 ## Quick Start
-Create a project folder and init the boilplate inside:
-
+Create a project folder, init start-up boilplate inside and run `start up` to start the development:
 ```bash
 mkdir project-x
-cs project-x
+cd project-x
 start init
-```
-
-Run `start up` and start the development:
-
-```bash
 start up
 ```
 
