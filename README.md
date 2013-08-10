@@ -7,7 +7,7 @@ Development hosting with live compilations of Jade, CoffeeScript, Stylus and mor
 ## Features
 * development hosting
 * live compilations of Jade, CoffeeScript and Stylus
-* [live refresh](github.com/shallker-wang/live-refresh)
+* [live refresh](http://github.com/shallker-wang/live-refresh)
 
 
 ## Installation
