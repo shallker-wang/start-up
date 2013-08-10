@@ -1,26 +1,31 @@
 #!/usr/bin/env node
 
 /* start up command line interface */
-var command = require('commander'),
+var commander = require('commander'),
     startup = require('../index');
 
-command
+commander
   .version(startup.version)
   .option('-e --example', 'Generate an example')
   .option('-c --config', 'Generate a config file')
+  .option('-u --up', 'Start the development')
   .parse(process.argv);
 
-if (command.example) {
-  var name = command.example[0];
+if (commander.example) {
+  var name = commander.example[0];
   return startup.createProject(name);
 }
 
-if (command.config) {
+if (commander.config) {
   return startup.createConfig();
 }
 
-if (command.args.length) {
-  return console.warn('unrecognized option: ' + command.args.shift());
+if (commander.args.length) {
+  return console.warn('unrecognized option: ' + commander.args.shift());
 }
 
-startup.serve();
+if (commander.up) {
+  return startup.serve();
+}
+
+commander.help()
