@@ -1,55 +1,55 @@
-node-serve
+start-up
 ==========
 
 Development hosting with live compile of Jade, CoffeeScript, Stylus and more.
 
 ## Installation
 ```
-sudo npm install git://github.com/shallker-wang/node-serve.git -g
+sudo npm install start-up -g
 ```
 
 ## Quick Start
 Create an example to start your new project:
 ```bash
-node-serve example my-new-project
+start example project-x
 ```
 
-Jump inside, run `node-serve` and start your development:
+Jump inside, run `start up` and start your development:
 ```bash
-cd my-new-project
-node-serve
+cd project-x
+start up
 ```
 
 ## You will love the config file
-In your project directory, put a file `ns.config`:
+In your project directory, put a file `start.json`:
 ```
 {
   "server": {
     "port": 8899,
-    "host": "./build"
+    "host": "./public/"
   },
   "compile": {
     "jade": {
-      "input": "./src/html",
-      "output": "./build",
+      "input": "./src/html/",
+      "output": "./public/",
       "pretty": true
     },
     "coffee": {
-      "input": "./src/js",
-      "output": "./build/js"
+      "input": "./src/js/",
+      "output": "./public/js/"
     },
     "stylus": {
-      "input": "./src/css",
-      "output": "./build/css",
+      "input": "./src/css/",
+      "output": "./public/css/",
       "compress": true
     }
   },
-  "livereload": "./build/css"
+  "liverefresh": "./public/css/"
 }
 ```
 
-## Before you run
-With `jade`, `coffee`, `stylus` commands installed if you wan to compile three of them:
+## Requirements
+With `jade`, `coffee`, `stylus` commands installed if you need to compile three of them:
 ```
 sudo npm install jade -g
 sudo npm install coffee-script -g
@@ -59,7 +59,6 @@ sudo npm install stylus -g
 ## Todo
 * ~~livereload~~
 * performance
-* ~~command `node-serve example`~~
 * add ETag support
 * add 'If-Modified-Since' header support
 * remove ncp dependency
