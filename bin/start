@@ -6,26 +6,38 @@ var commander = require('commander'),
 
 commander
   .version(startup.version)
-  .option('-e --example', 'Generate an example')
-  .option('-c --config', 'Generate a config file')
+  .option('-i --init [config]', 'Init a project boilplate or a configuration file')
   .option('-u --up', 'Start the development')
   .parse(process.argv);
 
-if (commander.example) {
-  var name = commander.example[0];
-  return startup.createProject(name);
+if (commander.init) {
+  if (commander.init === true) {
+    return startup.initProject();
+  }
+
+  if (typeof commander.init === 'string') {
+    if (commander.init === 'config') {
+      return startup.initConfig();
+    }
+    return startup.initProject();
+  }
+
+  if (Array.isArray(commander.init)) {
+    if (commander.init.length) {
+      if (commander.init[0] === 'config') {
+        return startup.initConfig();
+      }
+    }
+    return startup.initProject();
+  }
 }
 
-if (commander.config) {
-  return startup.createConfig();
+if (commander.up) {
+  return startup.start();
 }
 
 if (commander.args.length) {
   return console.warn('unrecognized option: ' + commander.args.shift());
-}
-
-if (commander.up) {
-  return startup.serve();
 }
 
 commander.help()
