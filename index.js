@@ -1,6 +1,6 @@
 var startup = require('./lib/start-up');
 
-exports.version = '1.0.2';
+exports.version = '1.1.0';
 
 exports.initConfig = function() {
   startup.initConfig()
