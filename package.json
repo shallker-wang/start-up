@@ -18,6 +18,7 @@
     "url": "https://github.com/shallker-wang/start-up/issues"
   },
   "dependencies": {
+    "dever": "*",
     "ncp": "*",
     "mime": "*",
     "commander": "*",
