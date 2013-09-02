@@ -1,6 +1,6 @@
 fs = require('fs')
 configer = require('../lib/configer')
-debug = require('../util/debug')('Test configer')
+debug = require('dever').debug('Test configer')
 
 testConfigFile = './test/start.json'
 testConfigJSON =
