@@ -25,6 +25,7 @@
     "live-refresh": "*"
   },
   "devDependencies": {
+    "coffee-script": "*",
     "should": "*",
     "mocha": "*"
   },
