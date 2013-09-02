@@ -114,6 +114,7 @@ Options:
 * remove ncp dependency
 * remove commands pre-installed requirements
 * remove .gitkeep, create build directories before compile
+* ```start build```
 
 
 ## License (MIT)
