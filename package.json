@@ -1,7 +1,7 @@
 {
   "name": "start-up",
   "description": "Development hosting with live compilations of Jade, CoffeeScript, Stylus and more.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Shallker Wang <shallker.wang@profero.com>",
   "main": "index.js",
   "keywords": [
